@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE VISIT | Electronic Press Kit</title>
+<meta name="description" content="Press kit for THE VISIT, an indie rock band from Bangkok. Music, bio, photos and booking.">
+<meta property="og:title" content="THE VISIT | EPK">
+<meta property="og:description" content="Indie rock from Bangkok. Music, bio,.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060A1C;
+  --bg2:#0B1330;
+  --deep:#0F1D7A;
+  --cobalt:#2F4BFF;
+  --soft:#8FA5FF;
+  --text:#E8EDFF;
+  --muted:#8A98C9;
+  --line:#1B2748;
+  --display:"Bricolage Grotesque","Noto Sans Thai",system-ui,sans-serif;
+  --body:"Instrument Sans","Noto Sans Thai",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:dark}
+body{overflow-x:clip}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.7;background:var(--bg);color:var(--text)}
+a{color:inherit;text-underline-offset:.25em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--soft);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0}
+h2{font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-.02em;margin-bottom:2rem}
+section{padding:5rem 0}
+
+/* Hero: the one bold moment */
+.hero{background:
+    radial-gradient(120% 70% at 0% 100%,rgba(47,75,255,.35),transparent 60%),
+    linear-gradient(rgba(6,10,28,.55),rgba(6,10,28,.5) 55%,#060A1C 100%),
+    url("images/background.jpg") center 78%/cover no-repeat,
+    var(--bg);min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem 0 3rem}
+.hero nav{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:.95rem;color:var(--muted)}
+.hero nav a{text-decoration:none}
+.hero nav a:hover{color:var(--text);text-decoration:underline}
+.hero h1{font-size:clamp(4rem,19vw,13rem);font-weight:800;letter-spacing:-.03em;line-height:.88;word-break:break-word}
+.hero h1 span{display:inline-block;will-change:translate;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span:nth-child(2){animation-delay:.12s}
+.hero h1 span:nth-child(3){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(.4em)}to{opacity:1;transform:none}}
+.tagline{font-size:1.25rem;max-width:30ch;margin:1.5rem 0 2rem;color:var(--soft)}
+.actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:999px;border:2px solid var(--cobalt);text-decoration:none;font-weight:500;transition:background .2s,border-color .2s}
+.btn.solid{background:var(--cobalt);color:#fff}
+.btn:hover{background:var(--text);border-color:var(--text);color:var(--bg)}
+
+/* Music */
+.tracks{list-style:none;margin:0;padding:0;border-top:2px solid var(--cobalt)}
+.tracks li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.tracks strong{font-family:var(--display);font-size:1.4rem;font-weight:500}
+.tracks small{color:var(--muted)}
+.tracks .en{font-weight:400;font-size:1rem;color:var(--muted)}
+iframe{color-scheme:normal;display:block}
+[hidden]{display:none!important}
+.play{font:inherit;font-size:.85rem;color:var(--text);background:transparent;border:1px solid var(--cobalt);border-radius:999px;padding:.15rem .8rem;cursor:pointer;margin-right:.5rem;transition:background .2s}
+.play:hover{background:var(--cobalt)}
+.tracks li.on strong{color:var(--soft)}
+.tracks li.on .play{background:var(--cobalt)}
+.vh{font-family:var(--display);font-size:1.6rem;font-weight:500;margin:3.5rem 0 1.25rem}
+.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.video{margin:0}
+.video:first-child{grid-column:1/-1}
+.video figcaption{margin-top:.5rem;font-size:.95rem}
+.video .en{color:var(--muted)}
+.thumb,.video iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:var(--bg2)}
+.thumb{position:relative;padding:0;cursor:pointer;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.75;transition:opacity .25s,transform .4s}
+.thumb::after{content:"";position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;
+  background:rgba(47,75,255,.9) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 6.5v11l9-5.5z'/></svg>") center/60% no-repeat;transition:transform .2s}
+.thumb:hover img{opacity:1;transform:scale(1.03)}
+.thumb:hover::after{transform:scale(1.1)}
+.player{margin-top:2rem}
+.src{display:flex;gap:.5rem;margin-bottom:.75rem}
+.src button{font:inherit;font-size:.9rem;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:.3rem 1rem;cursor:pointer}
+.src button[aria-pressed="true"]{color:var(--text);border-color:var(--cobalt);background:rgba(47,75,255,.25)}
+.hint{font-size:.9rem;color:var(--text);background:rgba(47,75,255,.25);border-left:3px solid var(--cobalt);padding:.6rem .9rem;margin:.75rem 0 0;max-width:62ch}
+.note{font-size:.85rem;color:var(--muted);margin:.75rem 0 0;max-width:62ch}
+.embed{margin-top:2rem;min-height:152px;border-radius:12px;overflow:hidden;background:var(--bg2)}
+
+/* Bio */
+.bio{background:var(--bg2)}
+.bio p{max-width:62ch;margin:0 0 1.2rem}
+.members{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.5rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line)}
+.members h3{font-size:1.3rem;font-weight:500}
+.members p{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
+
+/* Photos */
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.photo{position:relative;aspect-ratio:4/5;background:var(--bg2);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:0}
+.photo.wide{grid-column:1/-1;aspect-ratio:16/9}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo.wide img{object-position:center 15%}
+.photo.stage img{object-position:center 100%}
+@media(max-width:600px){.photos{grid-template-columns:1fr}.photo.wide{aspect-ratio:3/2}}
+.dl{margin-top:1.5rem}
+
+/* Contact */
+.contact{background:var(--deep)}
+.contact .mail{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,6vw,3.5rem);letter-spacing:-.02em;word-break:break-all}
+.contact ul{list-style:none;padding:0;margin:2rem 0 0;display:flex;gap:1.5rem;flex-wrap:wrap}
+footer.site{padding:2rem 0;font-size:.9rem;color:var(--muted);text-align:center}
+
+/* Film look: grain, vignette, halation */
+body::before{content:"";position:fixed;inset:0;z-index:49;pointer-events:none;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%)}
+body::after{content:"";position:fixed;inset:-50%;z-index:50;pointer-events:none;opacity:.16;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:grain .6s steps(6) infinite}
+@keyframes grain{
+  0%{transform:translate(0,0)}
+  17%{transform:translate(-4%,3%)}
+  33%{transform:translate(3%,-5%)}
+  50%{transform:translate(-5%,-2%)}
+  67%{transform:translate(4%,4%)}
+  83%{transform:translate(-2%,5%)}
+  100%{transform:translate(0,0)}}
+.hero h1{text-shadow:0 0 40px rgba(143,165,255,.35),0 0 2px rgba(143,165,255,.6)}
+.hero{filter:contrast(1.05) saturate(.95)}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero h1 span{animation:none}body::after{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO: แก้ชื่อวง แท็กไลน์ และลิงก์ ===== -->
+<header class="hero">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#music">Music</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <!-- แยกชื่อวงเป็น span ทีละคำ เพื่อให้ขึ้นมาทีละคำ (ใส่ 1-3 คำ) -->
+    <h1><span>THE</span> <span>VISIT</span></h1>
+    <p class="tagline">Indie Rock Bandfrom Bangkok.</p>
+    <div class="actions">
+      <a class="btn solid" href="#music">Listen</a>
+      <a class="btn" href="stage-plot.pdf" download>Download Stage plot/Tech Rider</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===== ABOUT : เขียนประวัติวงสั้นๆ ===== -->
+<section id="about" class="bio">
+  <div class="wrap">
+    <h2>About / เกี่ยวกับพวกเรา</h2>
+    <p>ไม่บอก</p>
+    <div class="members">
+      <div><h3>Member Name</h3><p>Vocals, guitar</p></div>
+      <div><h3>Member Name</h3><p>Guitar</p></div>
+      <div><h3>Member Name</h3><p>Bass</p></div>
+      <div><h3>Member Name</h3><p>Drums</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MUSIC: แก้ชื่อเพลง ปี และลิงก์ ===== -->
+<section id="music">
+  <div class="wrap">
+    <h2>Music / ผลงาน</h2>
+    <ul class="tracks">
+      <li data-spotify="2emjYe4CVFEmRpjak5Zjs1" data-yt="GI5eP44B7E0" data-title="ยังคงเหมือนเดิม">
+        <strong>ยังคงเหมือนเดิม <span class="en">(Still the same)</span></strong>
+        <small><button type="button" class="play">&#9654; Play</button> Latest release · <a href="https://open.spotify.com/track/2emjYe4CVFEmRpjak5Zjs1" target="_blank" rel="noopener">Spotify</a> · <a href="https://youtu.be/GI5eP44B7E0" target="_blank" rel="noopener">YouTube</a></small>
+      </li>
+      <li data-spotify="5Pnd8WsNFS5vdugEr2lVWP" data-yt="arkVHqvzsgs" data-title="ขอให้เป็นฉัน">
+        <strong>ขอให้เป็นฉัน <span class="en">(Let it be me)</span></strong>
+        <small><button type="button" class="play">&#9654; Play</button> Most viewed · <a href="https://open.spotify.com/track/5Pnd8WsNFS5vdugEr2lVWP" target="_blank" rel="noopener">Spotify</a> · <a href="https://youtu.be/arkVHqvzsgs" target="_blank" rel="noopener">YouTube</a></small>
+      </li>
+      <li data-spotify="7goctqmzi299wA7XlghWia" data-yt="aOZcQt642eo" data-title="ฝืนทน">
+        <strong>ฝืนทน <span class="en">(Hard to endure)</span></strong>
+        <small><button type="button" class="play">&#9654; Play</button> <a href="https://open.spotify.com/track/7goctqmzi299wA7XlghWia" target="_blank" rel="noopener">Spotify</a> · <a href="https://youtu.be/aOZcQt642eo" target="_blank" rel="noopener">YouTube</a></small>
+      </li>
+      <li data-spotify="7BLE1uclEXHQzutDgNAZAw" data-yt="JNX_BmqtFBg" data-title="ไม่ใช่ฉัน">
+        <strong>ไม่ใช่ฉัน <span class="en">(Not me)</span></strong>
+        <small><button type="button" class="play">&#9654; Play</button> <a href="https://open.spotify.com/track/7BLE1uclEXHQzutDgNAZAw" target="_blank" rel="noopener">Spotify</a> · <a href="https://youtu.be/JNX_BmqtFBg" target="_blank" rel="noopener">YouTube</a></small>
+      </li>
+      <li data-spotify="6HbSRsDTagd55oQcp9tc5e" data-yt="RmwnxSsbG34" data-title="เยี่ยมเยือน">
+        <strong>เยี่ยมเยือน <span class="en">(Visit)</span></strong>
+        <small><button type="button" class="play">&#9654; Play</button> First release · <a href="https://open.spotify.com/track/6HbSRsDTagd55oQcp9tc5e" target="_blank" rel="noopener">Spotify</a> · <a href="https://youtu.be/RmwnxSsbG34" target="_blank" rel="noopener">YouTube</a></small>
+      </li>
+    </ul>
+    <!-- ตัวเล่นเพลงในหน้า: กดปุ่ม Play ของแต่ละเพลงเพื่อโหลดมาเล่นที่นี่ -->
+    <div class="player">
+      <div class="src" role="group" aria-label="Choose player">
+        <button type="button" data-src="spotify" aria-pressed="true">Spotify</button>
+        <button type="button" data-src="youtube" aria-pressed="false">YouTube</button>
+      </div>
+      <div id="spotifyBox">
+        <!-- ตัวเล่นสำรองก่อนที่ Spotify API จะโหลดเสร็จ -->
+        <iframe id="spotifyFallback" src="https://open.spotify.com/embed/track/2emjYe4CVFEmRpjak5Zjs1?theme=0" width="100%" height="152"
+          style="border:0;border-radius:12px" loading="lazy" title="Spotify player"
+          allow="autoplay; encrypted-media; fullscreen"></iframe>
+      </div>
+      <iframe id="frame" src="about:blank" width="100%" hidden style="border:0;border-radius:12px;height:min(56vw,360px)"
+        title="YouTube player" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+      <p id="hint" class="hint" hidden>Your browser blocked autoplay. Press the play button inside the player once. After that, the Play buttons start songs directly.</p>
+      <p class="note">Press Play on a song and it starts here. Spotify plays full songs for listeners who are logged in, and 30-second previews for everyone else. YouTube plays the full song for everyone.</p>
+    </div>
+
+    <!-- ===== VIDEOS: คลิป YouTube ของผลงาน กดที่รูปเพื่อเล่นในหน้า ===== -->
+    <h3 class="vh">Videos / คลิปผลงาน</h3>
+    <div class="videos">
+      <figure class="video" data-id="0NQSU-VKvyM" data-title="ผลงานการแสดงสด">
+        <button type="button" class="thumb" aria-label="Play video: ผลงานการแสดงสด (Live performance)">
+          <img src="https://i.ytimg.com/vi/0NQSU-VKvyM/hqdefault.jpg" alt="" loading="lazy">
+        </button>
+        <figcaption>ผลงานการแสดงสด <span class="en">(Live performance)</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTOS: แทนกล่องด้วยรูปจริง ===== -->
+<section id="photos">
+  <div class="wrap">
+    <h2>Photos / รูปภาพ</h2>
+    <div class="photos">
+      <div class="photo wide"><img src="images/photo1.png" alt="THE VISIT, four band members posing in a rehearsal studio" loading="lazy"></div>
+      <div class="photo stage"><img src="images/photo2.jpg" alt="THE VISIT on stage with guitar, bass and trumpet in front of a red curtain and marquee lights" loading="lazy"></div>
+      <div class="photo"><img src="images/photo3.jpg" alt="THE VISIT backstage in front of a wall of gig posters" loading="lazy"></div>
+    </div>
+    <p class="dl"><a href="thevisit-photos.zip" download>Download our photos</a></p>
+  </div>
+</section>
+
+<!-- ===== CONTACT: แก้อีเมลและโซเชียล ===== -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contract / ติดต่อ</h2>
+    <a class="mail" href="mailto:กูไม่รู้@gmail.com">กูไม่รู้@gmail.com</a>
+    <div class="tel" href="tel:091.....567-890">091.....567-890</div>
+    <ul>
+      <li><a href="https://www.instagram.com/the_visit_1" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://open.spotify.com/artist/3cwHhlZyT7hS0xuVcG4Obt" target="_blank" rel="noopener">Spotify</a></li>
+      <li><a href="https://www.youtube.com/@THEVISIT-m7u" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="site">&copy; 2026 THE VISIT</footer>
+<script>
+/* Scroll-linked hero: THE and VISIT rise upward and fade */
+(function(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var words=document.querySelectorAll(".hero h1 span");
+  var ticking=false;
+  function update(){
+    var y=window.scrollY, vh=window.innerHeight;
+    var k=Math.min(y/vh,1);
+    if(words[0]) words[0].parentElement.style.opacity=1-k*0.9;
+    words.forEach(function(w,i){
+      var speed=i===0?30:20;   /* THE rises faster than VISIT */
+      w.style.translate="0 "+(-k*speed)+"vh";
+    });
+    ticking=false;
+  }
+  addEventListener("scroll",function(){
+    if(!ticking){ticking=true;requestAnimationFrame(update);}
+  },{passive:true});
+  addEventListener("resize",update);
+  update();
+})();
+</script>
+<script>
+/* In-page player. Spotify iFrame API controls the Spotify embed; YouTube uses a normal embed. */
+(function(){
+  var box=document.getElementById("spotifyBox");
+  var yt=document.getElementById("frame");
+  var fallback=document.getElementById("spotifyFallback");
+  var items=document.querySelectorAll(".tracks li");
+  var tabs=document.querySelectorAll(".src button");
+  var src="spotify", cur=items[0], ctrl=null;
+
+  function setActive(){ items.forEach(function(li){li.classList.toggle("on",li===cur);}); }
+  function uri(){ return "spotify:track:"+cur.dataset.spotify; }
+
+  var hint=document.getElementById("hint"), wantPlay=false, paused=true, timer=null;
+  function startPlay(){
+    if(!ctrl||!wantPlay) return;
+    wantPlay=false; ctrl.play();
+    clearTimeout(timer);
+    timer=setTimeout(function(){ if(paused) hint.hidden=false; },2000);
+  }
+  function loadSpotify(play){
+    hint.hidden=true;
+    if(ctrl){
+      wantPlay=!!play;
+      ctrl.loadUri(uri());
+      if(play) setTimeout(startPlay,1200);   /* backup if the "ready" event does not fire */
+    }else{
+      fallback.src="https://open.spotify.com/embed/track/"+cur.dataset.spotify+"?theme=0";
+    }
+  }
+  function loadYouTube(autoplay){
+    yt.src="https://www.youtube-nocookie.com/embed/"+cur.dataset.yt+(autoplay?"?autoplay=1":"");
+  }
+  function showSource(){
+    var sp=src==="spotify";
+    box.hidden=!sp; yt.hidden=sp;
+    if(sp){ yt.src="about:blank"; } else if(ctrl){ ctrl.pause(); }
+  }
+
+  items.forEach(function(li){
+    li.querySelector(".play").addEventListener("click",function(){
+      cur=li; setActive();
+      if(src==="spotify") loadSpotify(true); else loadYouTube(true);
+      (src==="spotify"?box:yt).scrollIntoView({behavior:"smooth",block:"nearest"});
+    });
+  });
+  tabs.forEach(function(b){
+    b.addEventListener("click",function(){
+      src=b.dataset.src;
+      tabs.forEach(function(x){x.setAttribute("aria-pressed",x===b);});
+      showSource();
+      if(src==="spotify") loadSpotify(false); else loadYouTube(false);
+    });
+  });
+  setActive();
+
+  /* Called by Spotify's script once it has loaded */
+  window.onSpotifyIframeApiReady=function(IFrameAPI){
+    box.innerHTML='<div id="spotify-embed"></div>';
+    IFrameAPI.createController(document.getElementById("spotify-embed"),
+      {uri:uri(),width:"100%",height:152},
+      function(c){
+        ctrl=c;
+        c.addListener("ready",startPlay);
+        c.addListener("playback_update",function(e){
+          paused=e.data.isPaused;
+          if(!paused){ hint.hidden=true; clearTimeout(timer); }
+        });
+      });
+  };
+})();
+</script>
+<script>
+/* Video previews: show a thumbnail, load the YouTube player only when clicked */
+document.querySelectorAll(".video").forEach(function(v){
+  v.querySelector(".thumb").addEventListener("click",function(){
+    var f=document.createElement("iframe");
+    f.src="https://www.youtube-nocookie.com/embed/"+v.dataset.id+"?autoplay=1&rel=0";
+    f.title=v.dataset.title+" video";
+    f.allow="autoplay; encrypted-media; fullscreen; picture-in-picture";
+    f.allowFullscreen=true;
+    this.replaceWith(f);
+  });
+});
+</script>
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+</body>
+</html>
